@@ -48,7 +48,15 @@ Golang
         Compiles to native code
         Performance is equivalent to C++
 
-    3. Built for concurrency
+    3. Built FOR concurrency
         concurrency = the ability to have more than one execution path
+        OS Threads are costly
+            1 OS thread = 2 MB of memory
+        1000s of goroutines can be executed using 1 OS thread
+        A concurrent operation in golang = a goroutine
+        Language has features to help with concurrency
+            go keyword, channel (data type), select, range, channel operation ( <- )
 
-
+Software Requirements
+    1. Go compiler - https://go.dev/dl/
+    2. Visual Studio Code - https://code.visualstudio.com/
