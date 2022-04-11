@@ -130,3 +130,4 @@ Assignment:02 (Console Calculator)
 
 Functions
     1. variadic functions
+    2. anonymous functions
