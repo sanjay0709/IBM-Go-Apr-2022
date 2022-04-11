@@ -127,3 +127,6 @@ Assignment:02 (Console Calculator)
     If the user enters any other choice 
         display "Invalid choice" 
         display the menu again.
+
+Functions
+    1. variadic functions
