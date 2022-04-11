@@ -22,8 +22,8 @@ func main() {
 	//for
 	/* for - ver 1.0 */
 	fmt.Println("for-loop (regular)")
-	for no := 1; no <= 10; no++ {
-		fmt.Println(no)
+	for x, no := 1, 100; no <= 10; no++ {
+		fmt.Println(no, x)
 	}
 
 	/* for - ver 2.0 */
