@@ -1,8 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
+
+var DivideByZeroError error = errors.New("cannot divide by zero")
 
 func main() {
 	defer func() {
@@ -15,7 +18,8 @@ func main() {
 	}()
 
 	result, err := divideClient(100, 0)
-	if err.Error() == "runtime error: integer divide by zero" {
+	//if err.Error() == "runtime error: integer divide by zero" {
+	if err == DivideByZeroError {
 		fmt.Println("Cannot divide by zero")
 		return
 	}
@@ -39,6 +43,9 @@ func divideClient(x, y int) (result int, err error) {
 }
 
 func divide(x, y int) int {
-	result := x / y //=> panic occurs
+	if y == 0 {
+		panic(DivideByZeroError)
+	}
+	result := x / y
 	return result
 }
