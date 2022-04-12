@@ -15,12 +15,31 @@ func main() {
 	logOperation(100, 200, add)
 	logOperation(100, 200, subtract)
 
+	multiply := func(x, y int) int {
+		return x * y
+	}
+
+	logOperation(100, 200, multiply)
+
+	logOperation(100, 7, func(x, y int) int {
+		return x / y
+	})
+
 }
 
-func logOperation(x, y int, oper func(int, int)) {
+func logOperation(x, y int, oper func(int, int) int) {
 	fmt.Println("invocation started")
-	oper(x, y)
+	result := oper(x, y)
+	fmt.Println("Result = ", result)
 	fmt.Println("invocation completed")
+}
+
+func add(x, y int) int {
+	return x + y
+}
+
+func subtract(x, y int) int {
+	return x - y
 }
 
 /*
@@ -37,6 +56,7 @@ func logSubtract(x, y int) {
 }
 */
 
+/*
 func add(x, y int) {
 	fmt.Println("Add result = ", x+y)
 }
@@ -44,6 +64,7 @@ func add(x, y int) {
 func subtract(x, y int) {
 	fmt.Println("Subtract result = ", x-y)
 }
+*/
 
 func fn() {
 	fmt.Println("fn invoked")
