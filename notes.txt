@@ -131,3 +131,10 @@ Assignment:02 (Console Calculator)
 Functions
     1. variadic functions
     2. anonymous functions
+    3. higher order functions (function that can be treated like data)
+        a. assign functions to variables
+        b. pass functions as arguments to other functions
+        c. return functions as return values
+
+Assignment:03
+    Refactor the solution for Assignment:02 in such a way that the solution is composed of functions with each of them having ONLY ONE responsibility
