@@ -148,3 +148,6 @@ Collections
         
     Map
         collection of key/value pairs
+
+Assignment:04
+    Refactor the solution for Assignment:01 with a function "generatePrimes" that returns the list of prime numbers between given 'start' and 'end'
