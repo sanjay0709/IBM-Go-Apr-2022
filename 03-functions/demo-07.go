@@ -19,10 +19,3 @@ func getIncrement() func() int {
 	}
 	return increment
 }
-
-
-func fn(){
-	var no int
-}
-
-fn()
