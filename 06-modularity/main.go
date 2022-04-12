@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	/* calc "modularity-demo/calculator" // package alias */
-	_ "modularity-demo/calculator" //to execute the "init" function
-	"modularity-demo/calculator/utils"
+	_ "Modularity-Demo/calculator" //to execute the "init" function
+	"Modularity-Demo/calculator/utils"
+
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -15,4 +17,6 @@ func main() {
 
 	fmt.Println("Is 21 an even number ? : ", utils.IsEven(21))
 	fmt.Println("Is 21 an odd number ? : ", utils.IsOdd(21))
+	color.Red("This string will be printed in red color")
+	color.Green("This string will be printed in green color")
 }

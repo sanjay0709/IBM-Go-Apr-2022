@@ -188,3 +188,26 @@ Modularity
                 go mod init <module_name>
                 ex: go mod init modularity-demo
 
+3rd party packages
+    To install
+        go get github.com/fatih/color
+    Note:
+        By default, the 3rd party packages are downloaded in the GOPATH/pkg folder
+
+    To update the dependencies
+        go mod download
+    
+    To update the go.mod file based on the usage of packages
+        go mod tidy
+
+    To localize the dependencies source code of the application
+        go mod vendor
+
+    To verify if the module files are changed in the module cache (NOT in the vendor folder)
+        go mod verify
+
+    To print the dependency graph
+        go mod graph
+
+    To know the usage of a package
+        go mod why <package_name>
