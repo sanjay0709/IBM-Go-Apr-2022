@@ -142,6 +142,8 @@ Assignment:03
 Collections
     Array
         FIXED size collection of data of the same type
-        
+
     Slice
+        Variable size collection of data of the same type
+        
     Map
