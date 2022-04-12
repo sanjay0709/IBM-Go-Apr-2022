@@ -147,3 +147,4 @@ Collections
         Variable size collection of data of the same type
         
     Map
+        collection of key/value pairs
