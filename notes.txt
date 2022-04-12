@@ -151,3 +151,40 @@ Collections
 
 Assignment:04
     Refactor the solution for Assignment:01 with a function "generatePrimes" that returns the list of prime numbers between given 'start' and 'end'
+
+Modularity
+    Modules
+    Packages
+
+    Modules were introduced in Go 1.13
+
+    Before Go 1.13
+        GOPATH - Path to the Go source code
+            bin
+            pkg
+            src
+                github.com
+                    tkmagesh
+                        my-app
+
+                            pkg1
+                                - file1.go
+                                - file2.go
+                            pkg2
+                                - file1.go
+                                - file2.go
+
+                        import "github.com/tkmagesh/my-app/pkg1"
+                        import "github.com/tkmagesh/my-app/pkg2"
+
+        module
+            application boundary
+            go.mod 
+                module name (it is advisable to use the repository path as the module name)
+                go version
+                dependencies
+
+            to create a module file
+                go mod init <module_name>
+                ex: go mod init modularity-demo
+
