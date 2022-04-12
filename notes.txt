@@ -138,3 +138,10 @@ Functions
 
 Assignment:03
     Refactor the solution for Assignment:02 in such a way that the solution is composed of functions with each of them having ONLY ONE responsibility
+
+Collections
+    Array
+        FIXED size collection of data of the same type
+        
+    Slice
+    Map
