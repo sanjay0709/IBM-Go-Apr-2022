@@ -232,3 +232,9 @@ Structs
                 => modify the cost of the given product by applying the given discount
                     Before applying discount, if product cost = 10
                     after applying 10% discount, the product cost should be 9
+
+
+    Assignment:08
+        Take the solution for Assignment:07 and convert the "Format" and "ApplyDiscount" functions to methods of Product
+
+        Create a "Format" method (override) for the "PerishableProduct" which will print all the fields of the product + Expiry
