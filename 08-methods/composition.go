@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Employee struct {
 	Id        int
@@ -14,9 +17,29 @@ func (e Employee) Format() string {
 	return fmt.Sprintf("Id = %d, FirstName = %q, LastName = %q, Salary = %v", e.Id, e.FirstName, e.LastName, e.Salary)
 }
 
+//function -> argument has to a 'pointer to employee'
+func ChangeName(emp *Employee, fullName string) {
+	names := strings.Split(fullName, " ")
+	emp.FirstName = names[0]
+	emp.LastName = names[1]
+}
+
+//the above as a method -> this can be invoked with a value OR a pointer
+func (emp *Employee) ChangeName(fullName string) {
+	names := strings.Split(fullName, " ")
+	emp.FirstName = names[0]
+	emp.LastName = names[1]
+}
+
 type FullTimeEmployee struct {
 	Employee
 	Benefits string
+}
+
+//method overriding
+func (fte FullTimeEmployee) Format() string {
+	//return fmt.Sprintf("Id = %d, FirstName = %q, LastName = %q, Salary = %v, Benefits = %q", fte.Id, fte.FirstName, fte.LastName, fte.Salary, fte.Benefits)
+	return fmt.Sprintf("%v, Benefits = %q", fte.Employee.Format(), fte.Benefits)
 }
 
 func NewFullTimeEmployee(id int, firstName string, lastName string, salary float32, benefits string) FullTimeEmployee {
@@ -43,4 +66,12 @@ func main() {
 	*/
 	fmt.Println(fte.Employee.Format())
 	fmt.Println(fte.Format())
+
+	fmt.Println()
+	fmt.Println("Change the name of the employee to [Ramesh Jayaraman]")
+	//ChangeName(&emp, "Ramesh Jayaraman")
+	//(&emp).ChangeName("Ramesh Jayaraman") // dont have to do this
+	emp.ChangeName("Ramesh Jayraman")
+	fmt.Println("After changing the name, emp => ")
+	fmt.Println(emp.Format())
 }
