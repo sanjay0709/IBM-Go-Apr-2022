@@ -24,6 +24,7 @@ func main() {
 	var emp *Employee = new(Employee) // pointer to a newly created Employee object
 	//fmt.Println(emp)
 	fmt.Printf("%#v\n", emp)
+	fmt.Println(emp.Id)
 
 	/*
 		e1 := Employee{200, "Suresh", "Kannan", 20000}
