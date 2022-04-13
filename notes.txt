@@ -239,3 +239,14 @@ Methods
         Take the solution for Assignment:07 and convert the "Format" and "ApplyDiscount" functions to methods of Product
 
         Create a "Format" method (override) for the "PerishableProduct" which will print all the fields of the product + Expiry
+
+
+Maintainability
+    Fixing Bugs
+    Adding New Features
+    Removing dead features
+
+    Changing the existing code
+        Single Responsibility Principle
+        Open-Closed Principle
+            Open for extension and closed for modification
