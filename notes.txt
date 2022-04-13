@@ -233,7 +233,8 @@ Structs
                     Before applying discount, if product cost = 10
                     after applying 10% discount, the product cost should be 9
 
-
+Methods
+    Methods cannot be defined on "non-local" types
     Assignment:08
         Take the solution for Assignment:07 and convert the "Format" and "ApplyDiscount" functions to methods of Product
 
