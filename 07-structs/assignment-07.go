@@ -16,6 +16,23 @@ type Product struct {
 	Create a factory function "NewPerishableProduct" to create a new perishable product
 */
 
+type PerishableProduct struct {
+	Product
+	Expiry string
+}
+
+func NewPerishableProduct(id int, name string, cost float32, units int, category string, expiry string) PerishableProduct {
+	return PerishableProduct{
+		Product: Product{
+			Id:       id,
+			Name:     name,
+			Cost:     cost,
+			Units:    units,
+			Category: category,
+		},
+		Expiry: expiry,
+	}
+}
 func main() {
 	pen := Product{
 		Id:       100,
@@ -30,12 +47,13 @@ func main() {
 	ApplyDiscount(&pen, 10)
 	fmt.Println(Format(pen))
 
-	/*
-		fmt.Println(pen.Cost)
-		var penPtr *Product = &pen
-		//fmt.Println((*penPtr).Cost)
-		fmt.Println(penPtr.Cost)
-	*/
+	//Using PerishableProduct
+	grapes := NewPerishableProduct(200, "Grapes", 40, 10, "Fruits", "2 Days")
+	fmt.Println(Format(grapes.Product))
+
+	fmt.Println("After applying 10% discount")
+	ApplyDiscount(&grapes.Product, 10)
+	fmt.Println(Format(grapes.Product))
 
 }
 
