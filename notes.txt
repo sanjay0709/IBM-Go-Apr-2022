@@ -211,3 +211,24 @@ Modularity
 
     To know the usage of a package
         go mod why <package_name>
+
+Structs
+    like class
+
+    Assignment:06
+        Create a 'Product' struct with the following fields
+            Id
+            Name
+            Cost
+            Units
+            Category (string)
+
+        Write the following functions
+            Format(/*...*/) 
+                => return a string with a formatted representation of the given product
+                    ex: Id=100, Name=Pen, Cost=10, Units=10, Category=Stationary
+            
+            ApplyDiscount(/*...*/)
+                => modify the cost of the given product by applying the given discount
+                    Before applying discount, if product cost = 10
+                    after applying 10% discount, the product cost should be 9

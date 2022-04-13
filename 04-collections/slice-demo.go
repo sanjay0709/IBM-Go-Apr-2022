@@ -62,4 +62,9 @@ func main() {
 	newProducts[0] = "Sketch-Pen"
 	fmt.Println("newProducts => ", newProducts)
 	fmt.Println("products => ", products)
+
+	x := []string{}
+	x = append(x, products[:3]...)
+	x = append(x, products[3:]...)
+	fmt.Println(x)
 }
