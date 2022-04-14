@@ -331,3 +331,6 @@ Assignment:11
     Write a goroutine "genPrimes" that will return the first 10 prime numbers from 3 (one after another with a time delay of 500 milliseconds)
     
     The main function will receive the prime numbers from the goroutine and print them
+
+Assignment:12
+    Modify the solution for Assignment:11 in a such a way the "genPrimes" function generates prime number for 20 seconds
