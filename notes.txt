@@ -309,3 +309,4 @@ Assignment:09
 
 Concurrency
     NEVER assume the time taken for a goroutine to execute
+    NEVER assume the order of execution of goroutines
