@@ -322,9 +322,9 @@ Concurrency
         
     Channel Behaviors
         1. A 'receive' operation on a channel is ALWAYS a blocking operation
-        2. A 'send' operation can succeed ONLY if a 'receive' operation is ALREADY initiated (CONDITIONS APPLY)
+        2. A 'send' operation can succeed ONLY if a 'receive' operation is ALREADY initiated (ONLY in a non-buffered channel)
             OR
-           A 'send' operation is blocked until a 'receive' operation is initiated (CONDITIONS APPLY)
+           A 'send' operation is blocked until a 'receive' operation is initiated (ONLY in a non-buffered channel)
 
 
 Assignment:11

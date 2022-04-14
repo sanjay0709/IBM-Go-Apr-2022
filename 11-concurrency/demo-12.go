@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//non-buffered channel
+
 /*
 func main() {
 	ch := make(chan int)
@@ -20,11 +22,21 @@ func main() {
 }
 */
 
+/*
 func main() {
 	ch := make(chan int)
 	go func() {
 		ch <- 100
 	}()
+	data := <-ch
+	fmt.Println(data)
+}
+*/
+
+//buffered channel
+func main() {
+	ch := make(chan int, 1)
+	ch <- 100
 	data := <-ch
 	fmt.Println(data)
 }
