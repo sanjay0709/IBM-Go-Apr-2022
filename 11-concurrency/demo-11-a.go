@@ -11,8 +11,8 @@ func main() {
 	fmt.Println("main started")
 	wg.Add(1)
 	go add(100, 200, wg, ch)
-	wg.Wait()
 	result := <-ch
+	wg.Wait()
 	fmt.Println(result)
 	fmt.Println("main completed")
 }
