@@ -7,9 +7,12 @@ import (
 
 func main() {
 	ch := genPrimes()
-	for i := 0; i < 10; i++ {
-		primeNo := <-ch
-		fmt.Println(primeNo)
+	for {
+		if primeNo, ok := <-ch; !ok {
+			break
+		} else {
+			fmt.Println(primeNo)
+		}
 	}
 }
 
@@ -25,6 +28,7 @@ func genPrimes() <-chan int {
 				counter--
 			}
 			if counter <= 0 {
+				close(ch)
 				break
 			}
 			no++
