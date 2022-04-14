@@ -15,6 +15,5 @@ func main() {
 
 func add(x, y int, ch chan<- int) {
 	result := x + y
-	<-ch
 	ch <- result
 }
