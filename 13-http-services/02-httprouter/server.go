@@ -23,9 +23,10 @@ func greetPost(w http.ResponseWriter, r *http.Request, params httprouter.Params)
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 	w.Write([]byte(fmt.Sprintf("[POST] Hello %s\n", name)))
 }
+
 func main() {
 	router := httprouter.New()
-	router.ServeFiles("/public/*filepath", http.Dir("/Users/tkmagesh77/Documents/Training/IBM-AdvGo-Nov-2021/03-http-services/02-httprouter/static"))
+	router.ServeFiles("/public/*filepath", http.Dir("/Users/tkmagesh77/Documents/Training/IBM-Go-Apr-2022/13-http-services/02-httprouter/static"))
 	router.GET("/", index)
 	router.GET("/greet/:name", greet)
 	router.POST("/greet/:name", greetPost)

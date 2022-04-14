@@ -356,3 +356,40 @@ IO
 Data Seraialization & Deserialization
     encoding package
     
+
+HTTP Services
+    http package
+        "/" , function
+        "/products", func(){
+            if GET {
+                handle request
+                serialize / deserialize data
+            }
+            if POST {
+
+            }
+            if PUT {
+
+            }
+        }
+
+    3rd party routing libraries
+        router.get("/products", func(){
+            handle request
+            serialize / deserialize data
+        })
+        router.post("/products", func(){
+            handle request
+            serialize / deserialize data
+        })
+
+    3rd party web framework
+        ctx.JSON(200, gin.H{
+            "message": "pong"
+        })
+
+Awesome Go
+    https://github.com/avelino/awesome-go
+
+Vulnerabilities
+    https://nvd.nist.gov/vuln/detail/CVE-2022-23773#
