@@ -1,0 +1,1 @@
+[{"id":105,"name":"Pen","cost":5,"units":50,"category":{"id":1,"name":"Stationary"}},{"id":103,"name":"Pencil","cost":2,"units":100,"category":{"id":1,"name":"Stationary"}},{"id":102,"name":"Marker","cost":50,"units":20,"category":{"id":1,"name":"Stationary"}}]

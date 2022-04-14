@@ -322,10 +322,13 @@ Concurrency
         
     Channel Behaviors
         1. A 'receive' operation on a channel is ALWAYS a blocking operation
+
         2. A 'send' operation can succeed ONLY if a 'receive' operation is ALREADY initiated (ONLY in a non-buffered channel)
             OR
            A 'send' operation is blocked until a 'receive' operation is initiated (ONLY in a non-buffered channel)
 
+        3. In a buffered channel
+             A 'send' operation can succeed even if a 'receive' operation is NOT initiate
 
 Assignment:11
     Write a goroutine "genPrimes" that will return the first 10 prime numbers from 3 (one after another with a time delay of 500 milliseconds)
@@ -334,3 +337,22 @@ Assignment:11
 
 Assignment:12
     Modify the solution for Assignment:11 in a such a way the "genPrimes" function generates prime number for 20 seconds
+
+
+IO
+    Reader interface
+    Writer interface
+
+    io package
+
+    os package
+        file operation
+
+    ioutil package
+
+    bufio package
+        buffered io
+
+Data Seraialization & Deserialization
+    encoding package
+    
