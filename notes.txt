@@ -325,3 +325,9 @@ Concurrency
         2. A 'send' operation can succeed ONLY if a 'receive' operation is ALREADY initiated (CONDITIONS APPLY)
             OR
            A 'send' operation is blocked until a 'receive' operation is initiated (CONDITIONS APPLY)
+
+
+Assignment:11
+    Write a goroutine "genPrimes" that will return the first 10 prime numbers from 3 (one after another with a time delay of 500 milliseconds)
+    
+    The main function will receive the prime numbers from the goroutine and print them
