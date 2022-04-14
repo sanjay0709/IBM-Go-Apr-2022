@@ -56,6 +56,7 @@ Golang
         A concurrent operation in golang = a goroutine
         Language has features to help with concurrency
             go keyword, channel (data type), select, range, channel operation ( <- )
+            APIs in the sync package
 
 Software Requirements
     1. Go compiler - https://go.dev/dl/
@@ -305,3 +306,6 @@ Assignment:09
                 4. sort the products collection by cost in descending order
                 5. sort the products collection by name in descending order
                 6. sort the products collection by units in descending order
+
+Concurrency
+    NEVER assume the time taken for a goroutine to execute
