@@ -310,3 +310,18 @@ Assignment:09
 Concurrency
     NEVER assume the time taken for a goroutine to execute
     NEVER assume the order of execution of goroutines
+
+    Creating a channel
+        ch := make(chan int)
+
+    Sending data to a channel
+        ch <- 100
+
+    Receive data from a channel
+        data := <- ch
+        
+    Channel Behaviors
+        1. A 'receive' operation on a channel is ALWAYS a blocking operation
+        2. A 'send' operation can succeed ONLY if a 'receive' operation is ALREADY initiated (CONDITIONS APPLY)
+            OR
+           A 'send' operation is blocked until a 'receive' operation is initiated (CONDITIONS APPLY)
